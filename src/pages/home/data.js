@@ -15,6 +15,7 @@ import TaxiCar from "../../assets/images/taxi.png";
 
 export const carUpList = [
   {
+    id:0,
     img:CityCar,
     name:"CityCar",
     rarity:"COMMON",
@@ -22,6 +23,7 @@ export const carUpList = [
     available_traits:"",
   },
   {
+    id:1,
     img:SedanCar,
     name:"Sedan",
     rarity:"COMMON",
@@ -29,6 +31,7 @@ export const carUpList = [
     available_traits:"",
   },
   {
+    id:2,
     img:HatchbackCar,
     name:"hatchback",
     rarity:"COMMON",
@@ -36,6 +39,7 @@ export const carUpList = [
     available_traits:"",
   },
   {
+    id:3,
     img:JeepCar,
     name:"JEEP",
     rarity:"UNCOMMON",
@@ -43,6 +47,7 @@ export const carUpList = [
     available_traits:"",
   },
   {
+    id:4,
     img:PickupCar,
     name:"Pickup",
     rarity: "UNCOMMON",
@@ -50,6 +55,7 @@ export const carUpList = [
     available_traits:"",
   },
   {
+    id:5,
     img:SuvCar,
     name:"Suv",
     rarity: "UNCOMMON",
@@ -60,6 +66,7 @@ export const carUpList = [
 
 export const carDownList = [
   {
+    id:6,
     img:PoliceCar,
     name:"PoliceCar",
     rarity: "RARE",
@@ -67,6 +74,7 @@ export const carDownList = [
     available_traits:"",
   },
   {
+    id:7,
     img:ConvertibleCar,
     name:"Convertible",
     rarity:"RARE",
@@ -74,6 +82,7 @@ export const carDownList = [
     available_traits:"",
   },
   {
+    id:8,
     img:TaxiCar,
     name:"Taxi",
     rarity:"RARE",
@@ -81,6 +90,7 @@ export const carDownList = [
     available_traits:"",
   },
   {
+    id:9,
     img:SportCar,
     name:"Sport",
     rarity:"EPIC",
@@ -88,6 +98,7 @@ export const carDownList = [
     available_traits:"",
   },
   {
+    id:10,
     img:ClassicCar,
     name:"Classic",
     rarity:"EPIC",
@@ -95,6 +106,7 @@ export const carDownList = [
     available_traits:"",
   },
   {
+    id:11,
     img:RetroCar,
     name:"Retro",
     rarity: "RETRO",

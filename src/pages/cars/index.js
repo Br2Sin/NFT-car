@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../../layout/layout";
 import ImgCar from '../../assets/images/cars_header.png'
 import ImgMagic from '../../assets/images/magic.png'
@@ -9,8 +9,15 @@ import "./cars.scss"
 import { WalletConnectButton } from "../../components/button/connect";
 import { carsList, traitsList } from "./data";
 import { CarItem } from "../../components/item/car";
+import { useLocation } from "react-router-dom";
 
 const CarsPage = () => {
+  const location = useLocation()
+  const [carId, setCarId] = useState(0)
+  useEffect(() => {
+    setCarId(location.state?.id)
+  }, []);
+
   return (<Layout title="cars page">
     <div className="cars-container">
       <div className="header pt-36 md:pt-52 lg:pt-60">

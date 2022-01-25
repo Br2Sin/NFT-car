@@ -12,10 +12,19 @@ import { SectionTitle } from "../../components/label";
 import { carUpList, carDownList } from "./data";
 import { CarItem } from "../../components/item/car";
 import CarouselControl from "../../components/button/carousel-control";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = (props) => {
+  const navigate = useNavigate()
   const [mintCount, setMintCount] = useState(0)
 
+  const handleNavigate = (id) => {
+    navigate('/cars',{
+      state:{
+        id:id
+      }
+    })
+  }
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -122,7 +131,7 @@ const HomePage = (props) => {
                 responsive={responsive}
                 className="gap-4">
                 {carUpList.map((car, idx) => (
-                  <CarItem car={car} key={idx} />
+                  <CarItem car={car} key={idx} onClick={()=>handleNavigate(car.id)} />
                 ))}
               </Carousel>
             </div>
@@ -132,7 +141,7 @@ const HomePage = (props) => {
                 responsive={responsive}
                 className="gap-4">
                 {carDownList.map((car, idx) => (
-                  <CarItem car={car} key={idx} />
+                  <CarItem car={car} key={idx} onClick={()=>handleNavigate(car.id)}/>
                 ))}
               </Carousel>
             </div>
