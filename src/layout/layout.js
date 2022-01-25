@@ -16,7 +16,7 @@ const Layout = ({
         <title>{title}</title>
       </Helmet>
       <Header />
-      <main className="w-full flex-1 mt-16">
+      <main className="w-full flex-1">
         {children}
       </main>
       <Footer />

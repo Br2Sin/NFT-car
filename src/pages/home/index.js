@@ -50,8 +50,8 @@ const HomePage = (props) => {
 
   return (
     <Layout>
-      <div className="home-container font-inter">
-        <div className="bg-black text-white flex justify-center">
+      <div className="home-container font-inter ">
+        <div className="mint-container text-white flex justify-center pt-36 md:pt-52 lg:pt-60">
           <div className="flex clear-left w-10/12 flex-col lg:flex-row" >
             <div className="w-full lg:w-1/2 px-4 md:px-8 lg:px-20 flex flex-col gap-12">
               <div className="flex flex-col">

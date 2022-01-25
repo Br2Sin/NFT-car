@@ -8,7 +8,7 @@ import IcoMenu from '../../assets/icons/ic_menu.svg'
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false)
   return (
-    <div className="h-36 md:h-52 lg:h-60 flex justify-between items-center w-full px-10 lg:px-20">
+    <div className="absolute h-36 md:h-52 lg:h-60 flex justify-between items-center w-full px-10 lg:px-20">
       <img src={Logo} alt="logo" className="w-36 md:w-52 lg:w-73" />
       <div className="md:flex gap-4 hidden">
         <div className="flex gap-8">
