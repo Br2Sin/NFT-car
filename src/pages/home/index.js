@@ -9,7 +9,7 @@ import ImgCool from '../../assets/images/cool.png'
 import ImgCar from '../../assets/images/car.png'
 import "./homepage.scss"
 import { SectionTitle } from "../../components/label";
-import { carList } from "./data";
+import { carUpList, carDownList } from "./data";
 import { CarItem } from "../../components/item/car";
 import CarouselControl from "../../components/button/carousel-control";
 
@@ -37,7 +37,7 @@ const HomePage = (props) => {
   const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
     const { carouselState: { currentSlide } } = rest;
     return (
-      <div className="absolute w-full left-0 right-0 sm:block hidden">
+      <div className="absolute left-0 right-0 hidden w-full sm:block">
         <div className="flex justify-between">
 
           <CarouselControl prev={true} className={currentSlide === 0 ? 'disable' : ''} onClick={() => previous()} />
@@ -51,23 +51,23 @@ const HomePage = (props) => {
   return (
     <Layout>
       <div className="home-container font-inter ">
-        <div className="mint-container text-white flex justify-center pt-36 md:pt-52 lg:pt-60">
-          <div className="flex clear-left w-10/12 flex-col-reverse lg:flex-row" >
-            <div className="w-full lg:w-1/2 px-4 md:px-8 lg:px-20 flex flex-col gap-12">
+        <div className="flex justify-center text-white mint-container pt-36 md:pt-52 lg:pt-60">
+          <div className="flex flex-col-reverse w-10/12 clear-left lg:flex-row" >
+            <div className="flex flex-col w-full gap-12 px-4 lg:w-1/2 md:px-8 lg:px-20">
               <div className="flex flex-col">
                 <SectionTitle>
-                  <p className="text-white flex sm:flex-row flex-col">
-                    <p className="text-app-purple flex items-end">
-                      <p className="text-6xl xl:text-8xl -mb-1">U</p>
+                  <p className="flex flex-col text-white sm:flex-row">
+                    <p className="flex items-end text-app-purple">
+                      <p className="-mb-1 text-6xl xl:text-8xl">U</p>
                       nder</p>
-                    <p className="text-white flex items-end">
-                      <p className="text-6xl xl:text-8xl -mb-1">G</p>
+                    <p className="flex items-end text-white">
+                      <p className="-mb-1 text-6xl xl:text-8xl">G</p>
                       round</p>
                   </p>
                 </SectionTitle>
                 <SectionTitle>
                   <p className="flex items-end">
-                    <p className="text-6xl xl:text-8xl -mb-1">R</p>acing
+                    <p className="-mb-1 text-6xl xl:text-8xl">R</p>acing
                   </p>
                 </SectionTitle>
               </div>
@@ -75,8 +75,8 @@ const HomePage = (props) => {
                 Underground racing is a Brand new community driven Racing p2e game coming to avalanche where you can run underground
                 races on different maps and get rewards on every won race.
               </p>
-              <button className="bg-app-purple w-max mx-auto rounded-full capitalize px-4 py-2">start collection NFT</button>
-              <div className="grid grid-cols-3 lg:w-2/3 mx-auto">
+              <button className="px-4 py-2 mx-auto capitalize rounded-full bg-app-purple w-max">start collection NFT</button>
+              <div className="grid grid-cols-3 mx-auto lg:w-2/3">
                 <p className="text-3xl font-bold">0</p>
                 <p className="text-3xl font-bold">0</p>
                 <p className="text-3xl font-bold">10.000+</p>
@@ -85,9 +85,9 @@ const HomePage = (props) => {
                 <p className="text-gray-400">Supply</p>
               </div>
               <div className="flex flex-col items-center justify-center gap-2">
-                <div className="flex gap-2 items-center">
+                <div className="flex items-center gap-2">
                   <button className="text-3xl" onClick={() => setMintCount(mintCount > 0 ? mintCount - 1 : 0)}>-</button>
-                  <div className="w-28 text-center text-xl py-1 bg-app-primary rounded-full">{mintCount}</div>
+                  <div className="py-1 text-xl text-center rounded-full w-28 bg-app-primary">{mintCount}</div>
                   <button className="text-3xl" onClick={() => setMintCount(mintCount + 1)}>+</button>
                 </div>
                 <button className="text-xl">MINT</button>
@@ -100,38 +100,38 @@ const HomePage = (props) => {
         </div>
 
         {/* models */}
-        <div className="model-container flex flex-col bg-black text-white pt-33">
-          <div className="flex justify-center items-center w-full flex-col gap-16">
+        <div className="flex flex-col text-white bg-black model-container pt-33">
+          <div className="flex flex-col items-center justify-center w-full gap-16">
             <div className="mx-auto">
               <SectionTitle className="flex text-center">GEN-O <p className="text-app-purple">Cars</p></SectionTitle>
             </div>
-            <p className="text-center w-3/4 md:w-2/3 text-xl md:text-2xl mx-auto">There’s a total of 12 models in gen-0. each having it’s own rarity level, wich Will determine it’s cometitive stats in game. Remind that there’s a huge randomness factor in every race and having rarest cars won’t assure at all that you win every race, but Will increase a lot your chances of winning them.</p>
+            <p className="w-3/4 mx-auto text-xl text-center md:w-2/3 md:text-2xl">There’s a total of 12 models in gen-0. each having it’s own rarity level, wich Will determine it’s cometitive stats in game. Remind that there’s a huge randomness factor in every race and having rarest cars won’t assure at all that you win every race, but Will increase a lot your chances of winning them.</p>
           </div>
-          <div className="flex flex-col gap-16  mt-33">
-            <p className="text-center text-4xl font-bold font-montserrat">
+          <div className="flex flex-col gap-16 mt-33">
+            <p className="text-4xl font-bold text-center font-montserrat">
               The available models in <br />
               <span className="font-birosic">gen-o</span> are:
             </p>
-            <p className="text-center w-3/4 md:w-2/3 text-xl md:text-2xl mx-auto">There’s a total of 12 models in gen-0. each having it’s own rarity level, wich Will determine it’s cometitive stats in game. Remind that there’s a huge randomness factor in every race and having rarest cars won’t assure at all that you win every race, but Will increase a lot your chances of winning them.</p>
+            <p className="w-3/4 mx-auto text-xl text-center md:w-2/3 md:text-2xl">There’s a total of 12 models in gen-0. each having it’s own rarity level, wich Will determine it’s cometitive stats in game. Remind that there’s a huge randomness factor in every race and having rarest cars won’t assure at all that you win every race, but Will increase a lot your chances of winning them.</p>
           </div>
           <img src={ImgCool} alt="cool" className="w-32 ml-8 sm:ml-12 lg:ml-32" />
-          <div className="flex flex-col gap-32 items-center justify-center pb-60">
-            <div className=" w-10/12 sm:px-10 relative">
+          <div className="flex flex-col items-center justify-center gap-32 pb-60">
+            <div className="relative w-10/12  sm:px-10">
               <Carousel
                 arrows={false} customButtonGroup={<ButtonGroup />}
                 responsive={responsive}
                 className="gap-4">
-                {carList.map((car, idx) => (
+                {carUpList.map((car, idx) => (
                   <CarItem car={car} key={idx} />
                 ))}
               </Carousel>
             </div>
-            <div className=" w-10/12 sm:px-10 relative">
+            <div className="relative w-10/12  sm:px-10">
               <Carousel
                 arrows={false} customButtonGroup={<ButtonGroup />}
                 responsive={responsive}
                 className="gap-4">
-                {carList.map((car, idx) => (
+                {carDownList.map((car, idx) => (
                   <CarItem car={car} key={idx} />
                 ))}
               </Carousel>
@@ -140,13 +140,13 @@ const HomePage = (props) => {
         </div>
 
         {/* roadmap */}
-        <div className="roadmap-container flex items-center flex-col xl:pb-82 pb:12 md:pb-28 pt-8 md:pt-28 xl:pt-45">
+        <div className="flex flex-col items-center pt-8 roadmap-container xl:pb-82 pb:12 md:pb-28 md:pt-28 xl:pt-45">
           <div className="relative">
             <SectionTitle>RoadMap</SectionTitle>
-            <img src={ImgGraffiti} alt="graffiti" className="absolute right-0 bottom-0 transform translate-x-1/2 translate-y-2/3 w-12 sm:w-20 md:w-32" />
+            <img src={ImgGraffiti} alt="graffiti" className="absolute bottom-0 right-0 w-12 transform translate-x-1/2 translate-y-2/3 sm:w-20 md:w-32" />
           </div>
-          <img src={ImgRoadMap} alt="roadmap" className="w-10/12 mt-20 sm:block hidden" />
-          <img src={ImgRoadVerticalMap} alt="vertical roadmap" className="sm:hidden mt-12"/>
+          <img src={ImgRoadMap} alt="roadmap" className="hidden w-10/12 mt-20 sm:block" />
+          <img src={ImgRoadVerticalMap} alt="vertical roadmap" className="mt-12 sm:hidden"/>
         </div>
       </div>
     </Layout>
